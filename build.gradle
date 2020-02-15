@@ -22,8 +22,16 @@ allprojects {
     }
 }
 
+task myTask(type:  MyTaskType) {
+    destFile = file("$buildDir/somefile.txt")
+}
+
 artifacts {
-    archives apppp1.apk
+    archives(myTask.destFile) {
+        name 'my-artifact'
+        type 'text'
+        builtBy myTask
+    }
 }
 
 task clean(type: Delete) {
