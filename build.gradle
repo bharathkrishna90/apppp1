@@ -22,14 +22,6 @@ allprojects {
     }
 }
 
-artifacts {
-    archives(myTask.destFile) {
-        name 'my-artifact'
-        type 'apk'
-        builtBy myTask
-    }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}
