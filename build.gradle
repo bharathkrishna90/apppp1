@@ -22,7 +22,7 @@ allprojects {
     }
 }
 
-task myTask(type:  MyTaskType) {
+task myTask() {
     destFile = file("$buildDir/somefile.txt")
 }
 
