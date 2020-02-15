@@ -22,10 +22,8 @@ allprojects {
     }
 }
 
-someFile = file("$buildDir/somefile.txt")
-
 artifacts {
-    archives someFile
+    archives apppp1.apk
 }
 
 task clean(type: Delete) {
