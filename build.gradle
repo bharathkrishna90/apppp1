@@ -22,6 +22,12 @@ allprojects {
     }
 }
 
+someFile = file("$buildDir/somefile.txt")
+
+artifacts {
+    archives someFile
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
