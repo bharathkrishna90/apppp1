@@ -22,14 +22,14 @@ allprojects {
     }
 }
 
-task myTask() {
-    destFile = file("$buildDir/somefile.txt")
+task myTask(type: archive) {
+    destFile = file("$buildDir/somefile.apk")
 }
 
 artifacts {
     archives(myTask.destFile) {
         name 'my-artifact'
-        type 'text'
+        type 'apk'
         builtBy myTask
     }
 }
